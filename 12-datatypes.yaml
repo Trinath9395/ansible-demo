@@ -9,11 +9,11 @@
     - ci 
     - ansible 
     - git 
-  live: true # boolean datatype 
-  tools: # map or dictanory datatype 
-    ci: jenkins 
-    cloud: aws 
-    containers: docker 
+    live: true # boolean datatype 
+    tools: # map or dictanory datatype 
+     ci: jenkins 
+     cloud: aws 
+     containers: docker 
   tasks: 
   - name: print the devops course information 
     ansible.builtin.debug: 
