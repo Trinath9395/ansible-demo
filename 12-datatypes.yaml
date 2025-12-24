@@ -1,0 +1,20 @@
+--- 
+- name: Datatypes 
+  hosts: local 
+  connection: local 
+  vars: 
+    course: "Devops with Aws" # string datatype
+    duration: 120Hr # number datatype 
+    topics: # list datatype 
+    - ci 
+    - ansible 
+    - git 
+  live: true # boolean datatype 
+  tools: # map or dictanory datatype 
+    ci: jenkins 
+    cloud: aws 
+    containers: docker 
+  tasks: 
+  - name: print the devops course information 
+    ansible.builtin.debug: 
+      msg: "Hello i am learning {{ course }}, duration: {{ duration }}, topics are: {{ topics }}, is it {{ live }},  tools covered are: {{ tools }}"
