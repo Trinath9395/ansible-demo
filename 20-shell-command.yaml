@@ -5,3 +5,6 @@
   tasks: 
   - name: execute the command 
     ansible.builtin.shell: ls -ltr > /tmp/output.txt 
+  
+  - name: execute the ls command in command module without redirecters 
+    ansible.builtin.command: ls -ltr 
