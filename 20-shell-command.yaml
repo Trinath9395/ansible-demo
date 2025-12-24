@@ -8,3 +8,8 @@
   
   - name: execute the ls command in command module without redirecters 
     ansible.builtin.command: ls -ltr 
+    register: command_output 
+  
+  - name: print the output 
+    ansible.builtin.debug: 
+      msg: "{{ command_output }}"
