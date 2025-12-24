@@ -1,0 +1,11 @@
+--- 
+- name: my number is grater then 15 or not 
+  hosts: local 
+  connection: local 
+  vars: 
+    my_number: 20 
+  tasks: 
+  - name: print my number is greater than 15 or not 
+    ansible.builtin.debug: 
+      msg: given number {{ my_number }} is greater than 15 
+    when: my_number > 15 

@@ -5,12 +5,12 @@
   vars: 
     course: "Devops with Aws" # string datatype
     duration: 120Hr # number datatype 
-    topics: # list datatype 
+    topics: # list datatype [] this is list symbol
     - ci 
     - ansible 
     - git 
     live: true # boolean datatype 
-    tools: # map or dictanory datatype 
+    tools: # map or dictanory datatype {} this is the map symbol
      ci: jenkins 
      cloud: aws 
      containers: docker 
