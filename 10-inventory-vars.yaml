@@ -7,10 +7,3 @@
     ansible.builtin.debug: 
       msg: "Course is {{ COURSE }}, duration is {{ DURATION }}, trainer is {{ TRAINER }}"
   
-- name: inventory variables 
-  hosts: local
-  connection: local
-  tasks: 
-  - name: Print the varibles 
-    ansible.builtin.debug: 
-      msg: "Course is {{ COURSE }}, duration is {{ DURATION }}, trainer is {{ TRAINER }}"
