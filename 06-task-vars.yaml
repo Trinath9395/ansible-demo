@@ -6,7 +6,7 @@
     COURSE: "Devops"
     DURATION: "120HR"
     TRAINER: "Trinath"
-  taks: 
+  tasks: 
   - name: Print the varibles 
     vars: 
       COURSE: Ansible 
