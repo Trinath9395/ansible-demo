@@ -43,3 +43,7 @@
     ansible.builtin.debug:
       msg: "{{ item.item }} => {{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
+
+  - name: Print only private IPs
+    ansible.builtin.debug:
+      msg: "{{ ec2_info.results | map(attribute='instances') | map('first') | map(attribute='private_ip_address') | list }}"
