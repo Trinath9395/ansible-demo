@@ -47,3 +47,18 @@
   - name: Print only private IPs
     ansible.builtin.debug:
       msg: "{{ ec2_info.results | map(attribute='instances') | map('first') | map(attribute='private_ip_address') | list }}"
+  
+
+  - name: Build instance name to private IP map
+    ansible.builtin.set_fact:
+      instance_ip_map: >-
+        {{
+          instance_ip_map | default({}) |
+          combine({ item.item: item.instances[0].private_ip_address })
+        }}
+    loop: "{{ ec2_info.results }}"
+
+  - name: Show instance → private IP mapping
+    ansible.builtin.debug:
+      var: instance_ip_map
+
