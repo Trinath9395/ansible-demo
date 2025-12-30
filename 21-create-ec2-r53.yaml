@@ -40,6 +40,6 @@
   #   loop: "{{ ec2_info.results }}"
   
   - name: print instance name and private ip
-  ansible.builtin.debug:
-    msg: "{{ item.item }} => {{ item.instances[0].private_ip_address }}"
-  loop: "{{ ec2_info.results }}"
+    ansible.builtin.debug:
+      msg: "{{ item.item }} => {{ item.instances[0].private_ip_address }}"
+    loop: "{{ ec2_info.results }}"
